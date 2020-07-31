@@ -1,0 +1,88 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    height: 100%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-areas:
+    "h"
+    "m"
+    "m"
+    "m"
+    "m"
+    "m"
+    "w"
+    "w"
+    "w"
+    "f"
+}
+
+header {
+    background-color: #6697f1;
+    margin: 0em;
+    border: 0em;
+    grid-area: h;
+    padding: 20px;
+}
+
+main {
+    background-color: rgb(6, 192, 6);
+    margin: 0em;
+    border: 0em;
+    grid-area: m;
+    padding: 20px;
+}
+
+.widget-area {
+    background-color: magenta;
+    margin: 0em;
+    border: 0em;
+    grid-area: w;
+    padding: 20px;
+}
+
+footer {
+    background-color: mediumblue;
+    margin: 0em;
+    border: 0em;
+    grid-area: f;
+    padding: 20px;
+}
+
+@media (min-width: 1024px) {
+    body {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        grid-template-areas:
+        "h m m"
+        "h m m"
+        "h m m"
+        "h m m"
+        "h m m"
+        "h m m"
+        "h w w"
+        "h w w"
+        "h w w"
+        "h f f"
+    }
+}
+
+@media (min-width: 2048px) {
+    body {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        grid-template-areas:
+        "h m m w"
+        "h m m w"
+        "h m m w"
+        "h m m w"
+        "h m m w"
+        "h m m w"
+        "h m m w"
+        "h m m w"
+        "h m m w"
+        "h f f w"
+    }
+}
